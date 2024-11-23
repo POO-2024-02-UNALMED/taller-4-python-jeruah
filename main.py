@@ -2,7 +2,7 @@ from classroom.asignatura import Asignatura
 from classroom.grupo import Grupo
 
 if __name__ == "__main__":
-    asignatura1 = Asignatura("Matematicas")
+    asignatura1 = Asignatura("Matematicas", "Remoto") # falta el salon
     asignatura2 = Asignatura("Castellano", "Salon 201")
     grupo1 = Grupo()
 
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     print(grupo5.listadoAlumnos)
 
     grupo3.listadoAsignaturas(as1="Ciencias", as2="Quimica", as3="Ingles")
-    print(len(grupo3._asignaturas))
+    print(len(grupo3.getAsignaturas())) # no esta bien acceder a privados
 
     Grupo.asignarNombre("Grado 1")
     print(Grupo.grado)
